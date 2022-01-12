@@ -19,14 +19,14 @@ public class CONEnemyHPBar : CONEntity
         rTr = GetComponent<RectTransform>();
     }
 
-    public void SetValue(float value)
+    public void SetValue(float hp, float Maxhp)
     {
-        if (co != null)
-        {
-            StopCoroutine(co);
-        }
-        co = StartCoroutine(DamageReduce(value));
-
+        slider.value = (float)hp / (float)Maxhp;
+        //if (co != null)
+        //{
+        //    StopCoroutine(co);
+        //}
+        //co = StartCoroutine(DamageReduce(value));
     }
 
     public override void OnEnable()

@@ -18,10 +18,16 @@ public class Enemy : MonoBehaviour
     public int attackDelay = 1;
     private float attackTimer = 0;
 
+    private void Start()
+    {
+        
+        hp = 5;
+        maxHp = hp;
+
+    }
+
     private void OnEnable()
     {
-        hp = maxHp;
-
         //hp ¹Ù»ý¼º
         CONEntity hpBarCon = GameSceneClass.gMGPool.CreateObj(ePrefabs.EnemyHPBar, new Vector2(25, 0));
         hpBar = hpBarCon.GetComponent<CONEnemyHPBar>();
@@ -56,7 +62,7 @@ public class Enemy : MonoBehaviour
             gameObject.SetActive(false);
         }
 
-        hpBar.SetValue((float)hp / maxHp);
+        hpBar.SetValue(hp ,maxHp);
         hpBar.SetPosition(ScreenTransform(offset));
 
     }
