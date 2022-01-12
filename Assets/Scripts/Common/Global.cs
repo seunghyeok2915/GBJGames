@@ -46,4 +46,5 @@ public class GameSceneClass
     public static MGPool gMGPool;
     public static UIRootGame gUiRootGame;
     public static UIRoot gUiRoot;
+    public static Camera mCam;
 }

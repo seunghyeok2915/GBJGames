@@ -32,7 +32,6 @@ public class CONEnemyHPBar : CONEntity
     public override void OnEnable()
     {
         base.OnEnable();
-        transform.SetParent(GameSceneClass.gUiRoot.transform, false);
     }
 
     public override void OnDisable()
@@ -40,6 +39,11 @@ public class CONEnemyHPBar : CONEntity
         base.OnDisable();
 
         StopAllCoroutines();
+    }
+
+    public void SetParent()
+    {
+        transform.SetParent(GameSceneClass.gUiRoot.transform, false);
     }
 
 
@@ -64,6 +68,9 @@ public class CONEnemyHPBar : CONEntity
         slider.value = value;
     }
 
-  
-
+    public Vector3 ScreenTransform(Vector3 Correction)
+    {
+        Vector3 pos = Camera.main.WorldToScreenPoint(transform.position + Correction);
+        return pos;
+    }
 }
