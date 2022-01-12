@@ -86,7 +86,7 @@ public class MGPool : MonoBehaviour
     {
         CONEntity createdEn = null;
         bool bNotEnough = true;
-
+        Debug.Log(inObj);
         for (int i = 0; i < poolTotalDic[inObj].Count; i++)
         {
             if (!poolTotalDic[inObj][i].IsActive())

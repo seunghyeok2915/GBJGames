@@ -53,8 +53,7 @@ public class EnemySpawner : MonoBehaviour
         CONEntity enemyCon = GameSceneClass.gMGPool.CreateObj(ePrefabs.Enemy, new Vector3(7, Random.Range(spawnYMin, spawnYMax), 0));
         Monsters.Add(enemyCon);
 
-        //GameObject temphpSlider = Instantiate(hpSlider, tempMonster.transform.position, Quaternion.identity, GameObject.Find("Canvas").transform);
-        //Monster tempMonsterCs = tempMonster.GetComponent<Monster>();
+        
         //tempMonsterCs.hpSliderGO = temphpSlider;
     }
 

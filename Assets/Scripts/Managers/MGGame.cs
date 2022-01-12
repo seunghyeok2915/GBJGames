@@ -24,7 +24,7 @@ public class MGGame : MonoBehaviour
 
         // Global._gameStat = eGameStatus.Playing;
 
-        GameObject.Instantiate(Global.prefabsDic[ePrefabs.MainCamera]);
+        GameSceneClass.mCam = GameObject.Instantiate(Global.prefabsDic[ePrefabs.MainCamera]).GetComponent<Camera>();
 
         enemyConList.Clear();
         //enemyHpBarConList.Clear();

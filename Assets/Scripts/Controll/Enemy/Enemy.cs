@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Prototype
 {
 
-    public class Enemy : EnemyPrototype
+    public class Enemy : MonoBehaviour
     {
         public int hp;
         private int maxHp = 100;
@@ -13,49 +13,43 @@ namespace Prototype
         //public EnemyHPBar hpBar;
         public Vector3 offset;
 
-
-
-        public Enemy(int hp, int speed)
-        {
-            this.maxHp = hp;
-            this.speed = speed;
-
-        }
-
-        public override EnemyPrototype Clone()
-        {
-            return new Enemy(hp, speed);
-        }
+        private CONEnemyHPBar hpBar;
 
         private void OnEnable()
         {
             hp = maxHp;
-          //  hpBar.Reset(ScreenTransform(offset), 1);
-          
+
+            //hp ¹Ù»ý¼º
+            CONEntity hpBarCon = GameSceneClass.gMGPool.CreateObj(ePrefabs.EnemyHPBar, Vector3.zero);
+            hpBar = hpBarCon.GetComponent<CONEnemyHPBar>();
+            hpBar.SetParent();
+
+            hpBar.Reset(ScreenTransform(offset), 1);
+
         }
 
-        //public Vector3 ScreenTransform(Vector3 Correction)
-        //{
-        //    Vector3 pos = Camera.main.WorldToScreenPoint(transform.position + Correction);
-        //    return pos;
-        //}
+        public Vector3 ScreenTransform(Vector3 Correction)
+        {
+            Vector3 pos = GameSceneClass.mCam.WorldToScreenPoint(transform.position + Correction);
+            return pos;
+        }
 
         private void Update()
         {
             Move();
 
-            //hpBar.SetValue(hp / maxHp);
-            //hpBar.SetPosition(ScreenTransform(offset));
+            hpBar.SetValue((float)hp / maxHp);
+            hpBar.SetPosition(ScreenTransform(offset));
         }
 
 
-        public override void Move()
+        public void Move()
         {
 
             transform.Translate(Vector2.left * speed * Time.deltaTime);
         }
 
-        public override void Attack()
+        public void Attack()
         {
 
         }
