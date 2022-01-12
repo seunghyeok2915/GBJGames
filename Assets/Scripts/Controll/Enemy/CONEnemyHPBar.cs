@@ -3,16 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EnemyHPBar : MonoBehaviour
+public class CONEnemyHPBar : CONEntity
 {
+
     public float reduceFactor = 4f;
     private Slider slider;
     private RectTransform rTr;
 
 
     private Coroutine co = null;
-    private void Awake()
+    public override  void Awake()
     {
+        base.Awake();
         slider = GetComponent<Slider>();
         rTr = GetComponent<RectTransform>();
     }
@@ -27,8 +29,16 @@ public class EnemyHPBar : MonoBehaviour
 
     }
 
-    private void OnDisable()
+    public override void OnEnable()
     {
+        base.OnEnable();
+        transform.SetParent(GameSceneClass.gUiRoot.transform, false);
+    }
+
+    public override void OnDisable()
+    {
+        base.OnDisable();
+
         StopAllCoroutines();
     }
 
@@ -54,9 +64,6 @@ public class EnemyHPBar : MonoBehaviour
         slider.value = value;
     }
 
+  
 
-    public void SetPosition(Vector3 pos) // 슬라이더 포지션
-    {
-        rTr.position = pos;
-    }
 }

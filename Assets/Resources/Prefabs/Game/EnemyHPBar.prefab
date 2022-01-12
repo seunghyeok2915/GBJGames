@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1885435684134342959}
   - component: {fileID: 7713794098465044238}
-  - component: {fileID: 4372568680162027423}
+  - component: {fileID: 4761257473096816893}
   m_Layer: 5
   m_Name: EnemyHPBar
   m_TagString: Untagged
@@ -90,7 +90,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &4372568680162027423
+--- !u!114 &4761257473096816893
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -99,9 +99,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 599136536230395198}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21ad1c88d6ef552458c811748ea0f1e4, type: 3}
+  m_Script: {fileID: 11500000, guid: 61dee4b63bad9b54caf633c2597db8d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myKind: 4002
+  myTrm: {fileID: 0}
+  myVelocity: {x: 0, y: 0, z: 0}
   reduceFactor: 4
 --- !u!1 &3834916670962230986
 GameObject:

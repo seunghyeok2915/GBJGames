@@ -27,6 +27,7 @@ public class MGGame : MonoBehaviour
         GameObject.Instantiate(Global.prefabsDic[ePrefabs.MainCamera]);
 
         enemyConList.Clear();
+        //enemyHpBarConList.Clear();
     }
 
     void OnEnable()
@@ -41,6 +42,9 @@ public class MGGame : MonoBehaviour
         {
             CONEntity enemyCon = GameSceneClass.gMGPool.CreateObj(ePrefabs.Enemy,new Vector2(25,Random.Range(-1,4)));
             enemyConList.Add(enemyCon);
+
+            //CONEntity enemyHPBarCon = GameSceneClass.gMGPool.CreateObj(ePrefabs.EnemyHPBar, default);
+            //enemyHpBarConList.Add(enemyHPBarCon);
         }
 
         if (Input.GetKeyDown(KeyCode.W))
@@ -52,6 +56,8 @@ public class MGGame : MonoBehaviour
             }
 
         }
+
+        
 
 
 
