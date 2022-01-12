@@ -31,6 +31,7 @@ public enum ePrefabs
     Enemy,
     Arrow,
     EnemyHPBar,
+    HitEffect,
 }
 
 public enum eSceneName

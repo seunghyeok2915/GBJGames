@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class Archer : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject arrow;
+  
 
-    // Update is called once per frame
-    void Update()
+    public void shot()
     {
-        
+       // CONEntity enemyCon = GameSceneClass.gMGPool.CreateObj(ePrefabs.Arrow,transform.position);
+
+        Instantiate(arrow, transform.position, Quaternion.identity);
     }
 }
