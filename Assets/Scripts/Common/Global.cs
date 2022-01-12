@@ -29,7 +29,8 @@ public enum ePrefabs
     UIRootGame,
     ENEMYS = 4000,
     Enemy,
-    EnemyHPBar
+    Arrow,
+    EnemyHPBar,
 }
 
 public enum eSceneName

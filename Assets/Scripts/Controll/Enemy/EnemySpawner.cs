@@ -51,6 +51,11 @@ public class EnemySpawner : MonoBehaviour
         monsterCount++;
 
         CONEntity enemyCon = GameSceneClass.gMGPool.CreateObj(ePrefabs.Enemy, new Vector3(23, Random.Range(spawnYMin, spawnYMax), 0));
+        Enemy enemy = enemyCon.GetComponent<Enemy>();
+        if(enemy != null)
+        {
+            enemy.Init();
+        }
         Monsters.Add(enemyCon);
 
         

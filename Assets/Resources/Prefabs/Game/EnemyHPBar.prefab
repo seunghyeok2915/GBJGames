@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dee4b63bad9b54caf633c2597db8d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myKind: 4002
+  myKind: 4003
   myTrm: {fileID: 0}
   myVelocity: {x: 0, y: 0, z: 0}
   reduceFactor: 4

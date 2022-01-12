@@ -28,13 +28,16 @@ public class Enemy : MonoBehaviour
 
     private void OnEnable()
     {
-        //hp ¹Ù»ý¼º
+       
+    }
+
+    public void Init()
+    {
         CONEntity hpBarCon = GameSceneClass.gMGPool.CreateObj(ePrefabs.EnemyHPBar, new Vector2(25, 0));
         hpBar = hpBarCon.GetComponent<CONEnemyHPBar>();
         hpBar.SetParent();
 
         hpBar.Reset(ScreenTransform(offset), 1);
-
     }
 
     public Vector3 ScreenTransform(Vector3 Correction)
