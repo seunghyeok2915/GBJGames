@@ -20,7 +20,7 @@ namespace Prototype
             hp = maxHp;
 
             //hp ¹Ù»ý¼º
-            CONEntity hpBarCon = GameSceneClass.gMGPool.CreateObj(ePrefabs.EnemyHPBar, Vector3.zero);
+            CONEntity hpBarCon = GameSceneClass.gMGPool.CreateObj(ePrefabs.EnemyHPBar,new Vector2(25,0));
             hpBar = hpBarCon.GetComponent<CONEnemyHPBar>();
             hpBar.SetParent();
 

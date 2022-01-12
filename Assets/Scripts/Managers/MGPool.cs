@@ -68,7 +68,7 @@ public class MGPool : MonoBehaviour
             {
                 myEn = (instantiateObj(myKind)).GetComponent<CONEntity>();
                 myEn.SetActive(false);
-                myEn.SetPosition(Vector3.zero);
+                myEn.SetPosition(new Vector3(30,0,0));
                 poolTotalDic[myKind].Add(myEn);
             }
         }
