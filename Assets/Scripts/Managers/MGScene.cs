@@ -59,7 +59,6 @@ public class MGScene : MonoBehaviour
             rootCvs = createdGo.GetComponent<Canvas>();
             rootTrm = createdGo.transform;
         }
-      
         addUiTrm = null;
 
         InitFirstScene();    
