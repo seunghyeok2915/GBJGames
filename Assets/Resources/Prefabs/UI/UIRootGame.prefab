@@ -68,6 +68,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   testImage: {fileID: 0}
+  hpText: {fileID: 914757262301447688}
+  slider: {fileID: 1684637716156796488}
+  hp: 1000
 --- !u!1 &388574927000521998
 GameObject:
   m_ObjectHideFlags: 0
@@ -1129,6 +1132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3842264624472706186}
   - component: {fileID: 2766764751681257367}
+  - component: {fileID: 5655583708568561139}
   m_Layer: 0
   m_Name: Hero1
   m_TagString: Untagged
@@ -1201,6 +1205,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5655583708568561139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5030297589092056310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b86dd3f6338e97448a2d73c21ec0030f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDelay: 0.2
 --- !u!1 &5037835149493164876
 GameObject:
   m_ObjectHideFlags: 0
@@ -1610,6 +1627,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4121070684493242242}
   - component: {fileID: 8064845509161498323}
+  - component: {fileID: 1142220711624469722}
   m_Layer: 0
   m_Name: Hero2
   m_TagString: Untagged
@@ -1682,6 +1700,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1142220711624469722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6901334426965256950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b86dd3f6338e97448a2d73c21ec0030f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDelay: 0.2
 --- !u!1 &7144989134507952363
 GameObject:
   m_ObjectHideFlags: 0
