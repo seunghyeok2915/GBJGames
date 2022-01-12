@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,9 +12,10 @@ public class EnemySpawner : MonoBehaviour
 
     public bool canSpawnMonster = false;
     public bool isBoss = false;
-    private List<CONEntity> Monsters = new List<CONEntity>();
-    private int monsterCount = 0;
+    public int monsterCount = 0;
     private int stageLevel = 0;
+
+    public List<CONEntity> Monsters = new List<CONEntity>();
 
     private void Update()
     {
@@ -41,9 +41,15 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
+    private void Awake()
+    {
+        GameSceneClass.enemySpawner = this;
+
+    }
     private void Start()
     {
         StartGame();
+
     }
 
     public void SpawnMonster()
@@ -52,13 +58,17 @@ public class EnemySpawner : MonoBehaviour
 
         CONEntity enemyCon = GameSceneClass.gMGPool.CreateObj(ePrefabs.Enemy, new Vector3(23, Random.Range(spawnYMin, spawnYMax), 0));
         Enemy enemy = enemyCon.GetComponent<Enemy>();
-        if(enemy != null)
+        if (enemy != null)
         {
             enemy.Init();
+            //enemy.onDead = () =>
+            //{
+            //    Monsters.Remove(enemyCon);
+            //};
         }
         Monsters.Add(enemyCon);
 
-        
+
         //tempMonsterCs.hpSliderGO = temphpSlider;
     }
 

@@ -49,4 +49,5 @@ public class GameSceneClass
     public static UIRootGame gUiRootGame;
     public static UIRoot gUiRoot;
     public static Camera mCam;
+    public static EnemySpawner enemySpawner;
 }

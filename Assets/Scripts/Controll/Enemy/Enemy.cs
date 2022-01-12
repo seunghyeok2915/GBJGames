@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,10 +19,12 @@ public class Enemy : MonoBehaviour
     public int attackDelay = 1;
     private float attackTimer = 0;
 
+    public Action onDead;
+
     private void Start()
     {
         
-        hp = 5;
+        hp = 20;
         maxHp = hp;
 
     }
@@ -63,11 +66,21 @@ public class Enemy : MonoBehaviour
         if (hp <= 0)
         {
             gameObject.SetActive(false);
+            //onDead?.Invoke();
+            GameSceneClass.enemySpawner.Monsters.Remove(this.GetComponent<CONEnemy>());
+            GameSceneClass.enemySpawner.monsterCount++;
+            hpBar.SetActive(false);
         }
 
         hpBar.SetValue(hp ,maxHp);
         hpBar.SetPosition(ScreenTransform(offset));
 
+    }
+
+    public void GetDamage(int value)
+    {
+        hp -= value;
+        //¿Ã∆—∆Æ ≈∞º¿
     }
 
 
