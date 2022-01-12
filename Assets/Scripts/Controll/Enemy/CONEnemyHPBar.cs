@@ -57,7 +57,7 @@ public class CONEnemyHPBar : CONEntity
             {
                 yield break; // 종료
             }
-            yield return null; // null 반환
+            yield return null; // nul l 반환
         }
     }
 
