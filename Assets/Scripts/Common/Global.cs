@@ -27,6 +27,8 @@ public enum ePrefabs
     UIRootLoading,
     UIRootTitle,
     UIRootGame,
+    ENEMYS = 4000,
+    Enemy
 }
 
 public enum eSceneName

@@ -9,7 +9,7 @@ public class MGGame : MonoBehaviour
     // public MGMinion _gMinionManager;
     // public MGHero.MGHero _gHeroManager;
 
-    List<CONEntity> heroConList = new List<CONEntity>();
+    List<CONEntity> enemyConList = new List<CONEntity>();
 
     void Awake()
     {
@@ -26,7 +26,7 @@ public class MGGame : MonoBehaviour
 
         GameObject.Instantiate(Global.prefabsDic[ePrefabs.MainCamera]);
 
-        heroConList.Clear();
+        enemyConList.Clear();
     }
 
     void OnEnable()
@@ -39,16 +39,16 @@ public class MGGame : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            CONEntity heroCon = GameSceneClass.gMGPool.CreateObj(ePrefabs.HeroGirl, Random.insideUnitCircle);
-            heroConList.Add(heroCon);
+            CONEntity enemyCon = GameSceneClass.gMGPool.CreateObj(ePrefabs.Enemy,new Vector2(25,Random.Range(-1,4)));
+            enemyConList.Add(enemyCon);
         }
 
         if (Input.GetKeyDown(KeyCode.W))
         {
-            if (heroConList.Count > 0)
+            if (enemyConList.Count > 0)
             {
-                heroConList[heroConList.Count - 1].SetActive(false);
-                heroConList.RemoveAt(heroConList.Count - 1);
+                enemyConList[enemyConList.Count - 1].SetActive(false);
+                enemyConList.RemoveAt(enemyConList.Count - 1);
             }
 
         }
