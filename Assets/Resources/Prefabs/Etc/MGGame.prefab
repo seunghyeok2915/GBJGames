@@ -99,6 +99,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemySpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 34819440962396095, guid: b3464cab8d167ac4e84cbfbae5f9012f, type: 3}
+      propertyPath: spawnYMax
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 34819440962396095, guid: b3464cab8d167ac4e84cbfbae5f9012f, type: 3}
+      propertyPath: spawnYMin
+      value: -8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b3464cab8d167ac4e84cbfbae5f9012f, type: 3}
 --- !u!4 &3427424002484322626 stripped

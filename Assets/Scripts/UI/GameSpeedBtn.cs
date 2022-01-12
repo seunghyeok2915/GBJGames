@@ -8,6 +8,7 @@ public class GameSpeedBtn : MonoBehaviour
     private int gameSpeed;
     public Text gameSpeedTxt;
     public Button gameSpeedBtn;
+  
 
     private bool fire = false;
 
