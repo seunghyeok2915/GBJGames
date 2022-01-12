@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Prototype
 {
-    public abstract class EnemyPrototype
+    public abstract class EnemyPrototype : MonoBehaviour
     {
         public abstract EnemyPrototype Clone();
 

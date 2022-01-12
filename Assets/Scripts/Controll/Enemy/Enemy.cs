@@ -7,10 +7,8 @@ namespace Prototype
 
     public class Enemy : EnemyPrototype
     {
-
-        private int hp;
-
-        private int speed;
+        public int hp;
+        public int speed;
 
 
         public Enemy(int hp, int speed)
