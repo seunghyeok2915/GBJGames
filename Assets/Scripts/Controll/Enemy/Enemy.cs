@@ -15,6 +15,10 @@ namespace Prototype
 
         private CONEnemyHPBar hpBar;
 
+        public int attackDamage = 10;
+        public int attackDelay = 1;
+        private float attackTimer = 0;
+
         private void OnEnable()
         {
             hp = maxHp;
@@ -36,22 +40,37 @@ namespace Prototype
 
         private void Update()
         {
+
+            if (transform.position.x < -13)
+            {
+                //공격
+                Attack();
+            }
+            else
+            {
             Move();
+
+            }
 
             hpBar.SetValue((float)hp / maxHp);
             hpBar.SetPosition(ScreenTransform(offset));
+
         }
 
 
         public void Move()
         {
-
             transform.Translate(Vector2.left * speed * Time.deltaTime);
         }
 
         public void Attack()
         {
-
+            if(Time.time > attackTimer)
+            {
+                //공격
+                //tower.AddDamage(attackDamage);
+                attackTimer = Time.time + attackDelay;
+            }
         }
     }
 }
