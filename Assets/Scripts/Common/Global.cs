@@ -28,7 +28,8 @@ public enum ePrefabs
     UIRootTitle,
     UIRootGame,
     ENEMYS = 4000,
-    Enemy
+    Enemy,
+    EnemyHPBar
 }
 
 public enum eSceneName
@@ -44,4 +45,5 @@ public class GameSceneClass
     public static MGGame gMGGame;
     public static MGPool gMGPool;
     public static UIRootGame gUiRootGame;
+    public static UIRoot gUiRoot;
 }
